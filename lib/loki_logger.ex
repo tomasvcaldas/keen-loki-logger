@@ -91,7 +91,7 @@ defmodule LokiLogger do
     finch_pool_size = Keyword.get(config, :finch_pool_size, 16)
     finch_pool_count = Keyword.get(config, :finch_pool_count, 4)
     finch_pool_max_idle_time = Keyword.get(config, :finch_pool_max_idle_time, 10_000)
-    mint_conn_opts = Keyword.get(config, :mint_conn_opts)
+    mint_conn_opts = Keyword.get(config, :mint_conn_opts, [])
 
     loki_labels = Keyword.get(config, :loki_labels, %{application: "loki_logger_library"})
 
