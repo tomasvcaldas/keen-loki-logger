@@ -149,7 +149,6 @@ defmodule LokiLogger.Exporter do
             body |> inspect() |> IO.puts()
 
           v ->
-            IO.puts("Loki url: #{inspect(loki_url)}")
             "Unable to connect to Loki service #{inspect(v)}" |> IO.puts()
         end
       end)
